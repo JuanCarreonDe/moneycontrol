@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AddTransaction from "./AddTransaction";
+// import AddTransaction from "./AddTransaction";
 import { GetDaysTotals } from "../hooks/useApi";
 
 const Transactions = () => {
@@ -17,13 +17,13 @@ const Transactions = () => {
   }, []); // Array vacío como segundo argumento para que se ejecute solo al montar el componente
 
   return (
-    <div className="border-2 border-green-700 w-full">
+    <div className="border-2 border-red-700 w-full">
       <h2>Transacciones</h2>
        {days?.map((day, i) =>(
-          <div key={i} className="border-2 border-red-300">
-            <li>Dia: {day.day}</li>
-            <li>+${day.totalIncome}</li>
-            <li>-${day.totalExpense}</li>
+          <div key={i} className="border-2 border-red-100 rounded-xl">
+            <li className="list-none">Dia: {day.day}</li>
+            <li className="list-none">+${day.totalIncome}</li>
+            <li className="list-none">-${day.totalExpense}</li>
           </div>
         ))}
     </div>

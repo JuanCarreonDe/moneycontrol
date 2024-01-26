@@ -16,7 +16,7 @@ const DayTransactions = () => {
   }, []);
 
   return (
-    <div className="bg-red-400">
+    <div className="bg-red-800">
       <p>DayTransactions</p>
       {transactions?.map((transaction, i) => (
         <div key={i} className="border-2">
