@@ -11,14 +11,21 @@ function App() {
       <div
         className="bg-primary text-[#E6E0E9]
                     min-h-screen w-full
-                    flex flex-col items-center"
+                    flex flex-col items-center
+                    "
       >
-        <NavTop />
-        <MonthPicker />
-        <Balance />
-        <Line />
-        <Transactions />
-        <DayTransactions />
+        <div
+          className="w-[90%]
+                    flex flex-col items-center py-[10%]
+        "
+        >
+          {/* <NavTop /> */}
+          <MonthPicker />
+          <Balance />
+          {/* <Line /> */}
+          <Transactions />
+          <DayTransactions />
+        </div>
       </div>
     </>
   );

@@ -34,7 +34,7 @@ const Balance = () => {
     <>
       <div className="w-[80%] p-5 rounded-3xl mb-7 flex flex-col items-center justify-center">
         <div className="text-[40px] font-light">${totalAmount}</div>
-        <div className="flex flex-col w-[70%]  text-sm text-gray-500 items-center">
+        <div className="flex flex-col w-[80%]  text-sm text-gray-500 items-center">
           <div className="flex w-full justify-between">
             <div>+${monthTotals?.totalIncome}</div>
             <div>-${monthTotals?.totalExpense}</div>
