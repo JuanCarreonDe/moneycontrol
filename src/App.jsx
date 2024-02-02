@@ -17,7 +17,7 @@ function App() {
         <div
           className="w-[90%]
                     flex flex-col items-center py-[10%]
-        "
+                    border-2 min-h-screen"
         >
           {/* <NavTop /> */}
           <MonthPicker />
