@@ -6,7 +6,9 @@ export const theme = {
     colors: {
       primary: "#141218",
       secondary: "#1D1B20",
-      cardBg: "#1D1B20"
+      cardBg: "#1D1B20",
+      gray: "#4D4B51",
+      green: "#4CAF50",
     }
   },
 };
