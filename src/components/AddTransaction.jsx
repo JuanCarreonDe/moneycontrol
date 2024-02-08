@@ -1,32 +1,68 @@
+import { FaPlus } from "react-icons/fa6";
 const AddTransaction = () => {
   return (
-    <div className="w-screen h-screen absolute top-0 right-0 opacity-[.7] bg-black flex justify-center items-center">
-        <div className="w-[80%] h-[80%] border-2 border-red-700 rounded-xl p-3 flex items-center flex-col">
-            <h1 className="text-white text-3xl mb-6">Agregar transaccion</h1>
-            <div className="border-2 border-white w-full h-full rounded-xl flex flex-col items-center justify-around">
-                <input type="text" placeholder="Monto"/>
-                <select name="fuente">
-                    <option value="0">--Seleccione la fuente--</option>
-                    <option value="4">Billetera</option>
-                    <option value="5">Cuenta banco</option>
-                </select>
-                <select name="categoria">
-                    <option value="0">--Seleccione la categoria--</option>
-                    <option value="2">Food</option>
-                    <option value="3">Bills</option>
-                    <option value="4">Transport</option>
-                    <option value="5">Shopping</option>
-                    <option value="6">Gifts</option>
-                    <option value="7">Education</option>
-                    <option value="8">Cravings</option>
-                </select>
-                <textarea name="description" placeholder="descripcion"></textarea>
-                <input type="date" />
-                <button className="border-2 border-yellow-500 p-3 rounded-xl text-white">Enviar</button>
+    <>
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+      <button
+        className="flex justify-center items-center rounded-2xl w-16 h-16 bg-[#1A1D1A] fixed bottom-[10%] right-[10%] focus-visible:outline-none z-10 hover:rounded-[50%] transition-all duration-300 shadow-md"
+        onClick={() => document.getElementById("my_modal_2").showModal()}
+      >
+        <FaPlus className="text-green-500" />
+      </button>
+      <dialog id="my_modal_2" className="modal">
+        <div className="modal-box w-[90%] flex flex-col items-center">
+          <h3 className="font-bold text-red-600 text-lg">Gasto</h3>
+          <form className="flex flex-col items-center border-2 w-[90%]">
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="amount"
+                className="input w-full max-w-xs focus-visible:outline-none"
+              />
             </div>
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="description"
+                className="input w-full max-w-xs focus-visible:outline-none"
+              />
+            </div>
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="category"
+                className="input w-full max-w-xs focus-visible:outline-none"
+              />
+            </div>
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="Account"
+                className="input w-full max-w-xs focus-visible:outline-none"
+              />
+            </div>
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="IsIncome"
+                className="input w-full max-w-xs focus-visible:outline-none"
+              />
+            </div>
+            <div className="w-full">
+              <input
+                type="date"
+                placeholder="Type here"
+                className="input w-full max-w-xs focus-visible:outline-none"
+              />
+            </div>
+          </form>
         </div>
-    </div>
-  )
-}
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+    </>
+  );
+};
 
-export default AddTransaction
+export default AddTransaction;

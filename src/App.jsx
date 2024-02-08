@@ -4,6 +4,7 @@ import NavTop from "./components/NavTop";
 import Transactions from "./components/Transactions";
 import Line from "./components/Line";
 import DayTransactions from "./components/DayTransactions";
+import AddTransaction from "./components/AddTransaction";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           {/* <Line /> */}
           <Transactions />
           <DayTransactions />
+          <AddTransaction/>
         </div>
       </div>
     </>
