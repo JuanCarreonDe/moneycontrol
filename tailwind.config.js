@@ -4,11 +4,11 @@ export const content = ["./src/**/*.{html,js,jsx}", "./index.html"];
 export const theme = {
   extend: {
     colors: {
-      primary: "#141218",
-      secondary: "#1D1B20",
-      cardBg: "#1D1B20",
-      gray: "#4D4B51",
+      mainBg: "#141218",
+      cardBg: "#1D1B20", 
+      gray: "#4D4B51", //textos grises
       green: "#4CAF50",
+      txtColor: "#E6E0E9"
     }
   },
 };

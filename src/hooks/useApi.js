@@ -22,8 +22,8 @@ export const GetMonthTotals = async (idUser) => {
 
 export const GetDaysTotals = async (idUser) => {
   const requestData = {
-    month: 12,
-    year: 2023,
+    month: 2,
+    year: 2024,
   };
 
   const { data } = await http.post(`getDaysTotals/${idUser}`, requestData, {
@@ -35,9 +35,9 @@ export const GetDaysTotals = async (idUser) => {
 };
 
 
-export const GetTransactionsOfDay = async (idUser) => {
+export const GetTransactionsOfDay = async (date, idUser) => {
   const requestData = {
-    date: '2024-01-13'
+    date: date
   };
 
   const { data } = await http.post(`getTransactionsOfDay/${idUser}`, requestData, {

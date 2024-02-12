@@ -2,7 +2,7 @@ import React from 'react'
 
 const Line = () => {
   return (
-    <div className='w-[70%] h-[2px] bg-secondary mb-7'/>
+    <div className='w-[70%] h-[2px] bg-txtColor mb-7'/>
   )
 }
 

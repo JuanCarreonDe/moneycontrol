@@ -26,22 +26,23 @@ const Balance = () => {
 
   const calculateGraphic = (totalIncome, totalExpense) => {
     const total = totalExpense + totalIncome;
-    const incomePercentage = (totalIncome * 100) / total;
+    const incomePercentage = Math.round((totalIncome * 100) / total);
+    console.log(incomePercentage);
     return incomePercentage;
   };
 
   return (
     <>
-      <div className="w-[80%] p-5 rounded-3xl mb-7 flex flex-col items-center justify-center">
+      <div className="w-[80%] p-4 rounded-3xl my-4 flex flex-col items-center justify-center bg-cardBg border-2">
         <div className="text-[40px] font-light">${totalAmount}</div>
-        <div className="flex flex-col w-[80%]  text-sm text-gray-500 items-center">
+        <div className="flex flex-col w-[80%] text-sm text-gray-500 items-center">
           <div className="flex w-full justify-between">
             <div>+${monthTotals?.totalIncome}</div>
             <div>-${monthTotals?.totalExpense}</div>
           </div>
           <div className="w-full h-2 rounded-md bg-gray-600 flex">
             <div
-              className={`w-[${incomePercentage}%] w-[62.5465%] h-2 rounded-md bg-green-500`}
+              className={`w-[${incomePercentage}%] w-[62.5465%] h-2 rounded-md bg-green`}
             ></div>
           </div>
           <a href="#" className="underline mt-2 text-slate-300">Ver cuentas</a>
