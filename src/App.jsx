@@ -1,5 +1,5 @@
 import Balance from "./components/Balance";
-import MonthPicker from "./components/MonthPicker";
+import Month from "./components/Month";
 // import NavTop from "./components/NavTop";
 import Transactions from "./components/Transactions";
 // import Line from "./components/Line";
@@ -14,7 +14,7 @@ function App() {
         <div
           className="w-[90vw] flex flex-col items-center h-[90vh] border-2">
           {/* <NavTop /> */}
-          <MonthPicker />
+          <Month />
           <Balance />
           {/* <Line /> */}
           <Transactions />
